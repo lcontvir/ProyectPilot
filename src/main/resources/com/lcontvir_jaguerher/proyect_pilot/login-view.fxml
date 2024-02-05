@@ -1,42 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
 <GridPane alignment="center" hgap="10" minHeight="400.0" minWidth="400.0" styleClass="login-grid" stylesheets="login_style.css" vgap="10" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lcontvir_jaguerher.proyect_pilot.LoginController">
 
-    <Label minHeight="25.0" text="Usuario:" textFill="white" GridPane.halignment="CENTER" GridPane.rowIndex="1">
-        <font>
-            <Font size="16" />
-        </font>
+    <ImageView fitHeight="200.0" fitWidth="459.0">
+      <image>
+         <Image url="@../../../Pokemon.png" />
+      </image>
+        <preserveRatio>true</preserveRatio>
+    </ImageView>
+
+    <Label minHeight="25.0" text="USUARIO" textFill="white" GridPane.halignment="LEFT" GridPane.rowIndex="3">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
     </Label>
-    <TextField fx:id="userTextField" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+    <TextField fx:id="userTextField" promptText="correo@example.com" GridPane.halignment="CENTER" GridPane.rowIndex="4">
       <font>
          <Font size="16.0" />
       </font></TextField>
 
-    <Label minHeight="25.0" text="Contraseña:" textFill="white" GridPane.halignment="CENTER" GridPane.rowIndex="3">
-        <font>
-            <Font size="16" />
-        </font>
+    <Label minHeight="25.0" text="CONTRASEÑA" textFill="white" GridPane.halignment="LEFT" GridPane.rowIndex="5">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
     </Label>
-    <PasswordField fx:id="passwordField" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+    <PasswordField fx:id="passwordField" promptText="********" GridPane.halignment="CENTER" GridPane.rowIndex="6">
       <font>
          <Font size="16.0" />
       </font></PasswordField>
 
-    <Button minHeight="35.0" onAction="#loginButtonAction" styleClass="login-button" text="Iniciar Sesión" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="6">
+    <Button minHeight="35.0" onAction="#loginButtonAction" styleClass="login-button" text="Iniciar Sesión" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="8">
       <font>
          <Font size="16.0" />
       </font></Button>
 
-    <Text fx:id="errorText" fill="RED" styleClass="error-text" textAlignment="CENTER" wrappingWidth="348.0" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+    <Text fx:id="errorText" fill="RED" styleClass="error-text" textAlignment="CENTER" wrappingWidth="348.0" GridPane.halignment="CENTER" GridPane.rowIndex="9" />
    <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
         <RowConstraints minHeight="10.0" prefHeight="30.0" />
         <RowConstraints minHeight="10.0" prefHeight="30.0" />
         <RowConstraints minHeight="10.0" prefHeight="30.0" />
         <RowConstraints minHeight="10.0" prefHeight="30.0" />
         <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
    </rowConstraints>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
 </GridPane>
