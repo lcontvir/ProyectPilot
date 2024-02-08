@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="center" hgap="10" minHeight="500.0" minWidth="400.0" prefHeight="695.0" prefWidth="400.0" styleClass="register-grid" stylesheets="register_style.css" vgap="12.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lcontvir_jaguerher.proyect_pilot.RegisterController">
+
+    <ImageView fitHeight="200.0" fitWidth="359.0" GridPane.rowIndex="1">
+        <image>
+            <Image url="@../../../Pokemon.png" />
+        </image>
+        <preserveRatio>true</preserveRatio>
+    </ImageView>
+
+    <Label minHeight="30.0" prefHeight="70.0" prefWidth="146.0" text="REGISTRO" textFill="white" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+        <font>
+            <Font name="System Bold" size="30.0" />
+        </font>
+    </Label>
+
+    <Label minHeight="25.0" text="NOMBRE DE USUARIO" textFill="white" GridPane.halignment="LEFT" GridPane.rowIndex="4">
+        <font>
+            <Font name="System Bold" size="12.0" />
+        </font>
+    </Label>
+
+    <TextField fx:id="usernameTextField" promptText="Nombre de usuario" GridPane.halignment="CENTER" GridPane.rowIndex="5">
+        <font>
+            <Font size="16.0" />
+        </font>
+    </TextField>
+
+    <Label minHeight="25.0" text="CORREO ELECTRÓNICO" textFill="white" GridPane.halignment="LEFT" GridPane.rowIndex="6">
+        <font>
+            <Font name="System Bold" size="12.0" />
+        </font>
+    </Label>
+
+    <TextField fx:id="emailTextField" promptText="correo@example.com" GridPane.halignment="CENTER" GridPane.rowIndex="7">
+        <font>
+            <Font size="16.0" />
+        </font>
+    </TextField>
+
+    <Label minHeight="25.0" text="CONTRASEÑA" textFill="white" GridPane.halignment="LEFT" GridPane.rowIndex="8">
+        <font>
+            <Font name="System Bold" size="12.0" />
+        </font>
+    </Label>
+
+    <PasswordField fx:id="passwordField" promptText="********" GridPane.halignment="CENTER" GridPane.rowIndex="9">
+        <font>
+            <Font size="16.0" />
+        </font>
+    </PasswordField>
+
+    <Label minHeight="25.0" text="CONFIRMAR CONTRASEÑA" textFill="white" GridPane.halignment="LEFT" GridPane.rowIndex="10">
+        <font>
+            <Font name="System Bold" size="12.0" />
+        </font>
+    </Label>
+
+    <PasswordField fx:id="confirmPasswordField" promptText="********" GridPane.halignment="CENTER" GridPane.rowIndex="11">
+        <font>
+            <Font size="16.0" />
+        </font>
+    </PasswordField>
+
+    <Label minHeight="25.0" text="FECHA DE NACIMIENTO" textFill="white" GridPane.halignment="LEFT" GridPane.rowIndex="12">
+        <font>
+            <Font name="System Bold" size="12.0" />
+        </font>
+    </Label>
+
+    <DatePicker fx:id="dobDatePicker" prefHeight="25.0" prefWidth="357.0" promptText="01/01/2000" GridPane.rowIndex="13">
+    </DatePicker>
+
+    <Button minHeight="33.0" prefHeight="34.0" prefWidth="119.0" onAction="#Registrarme" styleClass="register-button" text="Registrarme" textAlignment="CENTER" GridPane.halignment="RIGHT" GridPane.rowIndex="15">
+        <font>
+            <Font size="16.0" />
+        </font>
+        <GridPane.margin>
+            <Insets />
+        </GridPane.margin>
+    </Button>
+
+    <Text fx:id="errorText" fill="RED" styleClass="error-text" textAlignment="CENTER" wrappingWidth="348.0" GridPane.halignment="CENTER" GridPane.rowIndex="16" />
+
+    <Button minHeight="28.0" prefHeight="33.0" onAction="#BotonLogin" prefWidth="204.0" styleClass="register-button" text="Volver al Inicio de Sesión" textAlignment="CENTER" GridPane.halignment="LEFT" GridPane.rowIndex="15">
+        <GridPane.margin>
+            <Insets />
+        </GridPane.margin>
+        <font>
+            <Font size="16.0" />
+        </font>
+    </Button>
+
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+        <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="36.0" />
+        <RowConstraints maxHeight="25.0" minHeight="10.0" prefHeight="24.0" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+    </rowConstraints>
+    <columnConstraints>
+        <ColumnConstraints />
+    </columnConstraints>
+</GridPane>
