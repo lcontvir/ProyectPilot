@@ -32,9 +32,7 @@ public class LoginController{
         Usuario.setInstancia(verificarCredenciales(usuario, password));
 
         if(Usuario.getInstancia().getUsername() != null){
-            errorText.setStyle("--body-text-color: green");
-            errorText.setText("Inicio de sesion correcto!");
-            errorText.setStyle("--body-text-color: red");
+            goToNoticias();
         }
         else{
             errorText.setText("Credenciales incorrectas. Inténtelo de nuevo.");
@@ -56,5 +54,8 @@ public class LoginController{
 
     public void goToRegister() throws IOException {
         HelloLogin.switchScene("register-view.fxml", 400, 800, "Registro");
+    }
+    public void goToNoticias() throws IOException {
+        HelloLogin.switchScene("noticias-view.fxml", 800, 500, "Noticias");
     }
 }

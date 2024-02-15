@@ -20,20 +20,7 @@ public class Noticias {
     private void handleEditarButtonClick(ActionEvent event) {
         // Cargar la vista del editor desde el archivo FXML
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("editor-view.fxml"));
-            Parent root = loader.load();
-
-            // Obtener el controlador de la vista del editor
-                EditorNoticias editorController = loader.getController();
-
-            // Crear una nueva escena
-            Scene scene = new Scene(root);
-
-            // Configurar la escena
-            Stage stage = new Stage();
-            stage.setScene(scene);
-            stage.setTitle("Editor de Noticias");
-            stage.show();
+           HelloLogin.switchScene("editor-view.fxml", 800, 400, "Editor");
         } catch (IOException e) {
             e.printStackTrace();
         }
