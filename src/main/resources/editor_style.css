@@ -1,0 +1,13 @@
+.editor-grid {
+    -fx-background-image: url('Yve.jpg');
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+}
+.contenedor {
+    -fx-background-color: #ffffff; /* Color de fondo blanco */
+    -fx-border-color: #000; /* Color del borde */
+    -fx-border-width: 1px; /* Ancho del borde */
+    -fx-border-radius: 5px; /* Radio de borde */
+    -fx-padding: 10px; /* Espaciado interno */
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.2) , 5, 0.0 , 0 , 1 ); /* Sombra */
+}

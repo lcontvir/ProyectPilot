@@ -1,5 +1,5 @@
 .root {
-    -fx-background-color: transparent;
+    -fx-background-image: url('Yve.jpg');
 }
 
 #userTextField, #passwordField {

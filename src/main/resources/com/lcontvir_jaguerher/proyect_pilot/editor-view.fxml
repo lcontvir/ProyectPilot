@@ -1,14 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="$CONTROLLER_NAME$"
-            prefHeight="400.0" prefWidth="600.0" >
-
-</AnchorPane>
+<GridPane alignment="center" hgap="10" minHeight="291.0" minWidth="400.0" prefHeight="329.0" prefWidth="803.0" styleClass="editor-grid" stylesheets="editor_style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+    <columnConstraints>
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="245.33333333333337" minHeight="245.33333333333331" prefHeight="245.33333333333337" />
+        <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+    </rowConstraints>
+    <children>
+          <GridPane prefHeight="372.0" prefWidth="734.0" vgap="15">
+              <columnConstraints>
+                  <ColumnConstraints minWidth="10.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="245.0" />
+              </rowConstraints>
+              <children>
+                  <Pane prefHeight="255.0" prefWidth="788.0" styleClass="contenedor">
+                      <children>
+                          <Button layoutX="221.0" layoutY="203.0" prefHeight="28.0" prefWidth="138.0" style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-padding: 5px 10px;" text="Guardar">
+                          </Button>
+                          <Text layoutX="239.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Heroe o villano" wrappingWidth="102.13672637939453" />
+                          <TextArea layoutX="28.0" layoutY="48.0" prefHeight="138.0" prefWidth="553.0" wrapText="true">
+                              Doña Uzeada de Ribera Maldonado de Bracamonte y Anaya era baja, rechoncha, abigotada. Ya no existia razon para llamar talle al suyo. Sus colores vivos, sanos, podian mas que el albayalde y el soliman del afeite, con que se blanqueaba por simular melancolias. Gastaba dos parches oscuros, adheridos a las sienes y que fingian medicamentos. Tenia los ojitos ratoniles, maliciosos. Sabia dilatarlos duramente o desmayarlos con recato o levantarlos con disimulo. Caminaba contoneando las imposibles caderas y era dificil, al verla, no asociar su estampa achaparrada con la de ciertos palmipedos domesticos. Sortijas celestes y azules le ahorcaban las falanges
+                          </TextArea>
+                          <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="594.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                  <Image url="@../../../pachirisu.png" />
+                              </image>
+                          </ImageView>
+                      </children>
+                  </Pane>
+              </children>
+          </GridPane>
+    </children>
+</GridPane>

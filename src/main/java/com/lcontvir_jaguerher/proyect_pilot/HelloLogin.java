@@ -10,11 +10,13 @@ public class HelloLogin extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloLogin.class.getResource("login-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloLogin.class.getResource("noticias-view.fxml"));
 
-        Scene scene = new Scene(fxmlLoader.load(), 400, 300);
 
-        primaryStage.setMinHeight(300);
+        Scene scene = new Scene(fxmlLoader.load(),500,800);
+        primaryStage.setMinHeight(500);
+        primaryStage.setMinWidth(800);
+
 
         primaryStage.setTitle("Inicio de Sesión");
         primaryStage.setScene(scene);
