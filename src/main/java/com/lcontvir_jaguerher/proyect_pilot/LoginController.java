@@ -12,6 +12,7 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Objects;
 
 public class LoginController{
 
@@ -28,19 +29,32 @@ public class LoginController{
         String usuario = userTextField.getText();
         String password = passwordField.getText();
 
-        if (verificarCredenciales(usuario, password)) {
-            //Todo
-        } else {
+        Usuario.setInstancia(verificarCredenciales(usuario, password));
+
+        if(Usuario.getInstancia().getUsername() != null){
+            errorText.setStyle("--body-text-color: green");
+            errorText.setText("Inicio de sesion correcto!");
+            errorText.setStyle("--body-text-color: red");
+        }
+        else{
             errorText.setText("Credenciales incorrectas. Inténtelo de nuevo.");
         }
     }
 
-    private boolean verificarCredenciales(String usuario, String pass) {
-        //todo
-        return usuario.equals("admin") && pass.equals("admin");
+    private Usuario verificarCredenciales(String usuario, String pass) {
+        Usuario usuarioEncontrado = null;
+        for (Usuario user:
+             Usuario.ListaUsuarios) {
+            if(Objects.equals(user.getUsername(), usuario)){
+                if(Objects.equals(user.getPassword(), pass)){
+                    usuarioEncontrado = user;
+                }
+            }
+        }
+        return usuarioEncontrado;
     }
 
     public void goToRegister() throws IOException {
-        HelloLogin.switchScene("register-view.fxml", 400, 800);
+        HelloLogin.switchScene("register-view.fxml", 400, 800, "Registro");
     }
 }

@@ -8,12 +8,18 @@
 
 <GridPane alignment="center" hgap="10" minHeight="400.0" minWidth="400.0" styleClass="login-grid" stylesheets="login_style.css" vgap="10" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lcontvir_jaguerher.proyect_pilot.LoginController">
 
-    <ImageView fitHeight="200.0" fitWidth="459.0">
+    <ImageView fitHeight="213.0" fitWidth="338.0">
       <image>
          <Image url="@../../../Pokemon.png" />
       </image>
         <preserveRatio>true</preserveRatio>
     </ImageView>
+
+    <Label minHeight="30.0" prefHeight="38.0" prefWidth="256.0" text="INICIO DE SESION" textFill="white" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+        <font>
+            <Font name="System Bold" size="30.0" />
+        </font>
+    </Label>
 
     <Label minHeight="25.0" text="USUARIO" textFill="white" GridPane.halignment="LEFT" GridPane.rowIndex="3">
       <font>
@@ -40,13 +46,13 @@
          <Font size="16.0" />
       </font>
       <GridPane.margin>
-         <Insets right="40.0" />
+         <Insets right="10.0" />
       </GridPane.margin></Button>
 
     <Text fx:id="errorText" fill="RED" styleClass="error-text" textAlignment="CENTER" wrappingWidth="348.0" GridPane.halignment="CENTER" GridPane.rowIndex="9" />
-    <Button minHeight="35.0" styleClass="login-button" text="Registrarme" onAction="#goToRegister" textAlignment="CENTER" GridPane.halignment="LEFT" GridPane.rowIndex="8">
+    <Button minHeight="35.0" onAction="#goToRegister" styleClass="login-button" text="No tienes cuenta?" textAlignment="CENTER" GridPane.halignment="LEFT" GridPane.rowIndex="8">
       <GridPane.margin>
-         <Insets left="40.0" />
+         <Insets left="10.0" />
       </GridPane.margin>
       <font>
          <Font size="16.0" />
@@ -55,8 +61,8 @@
    <rowConstraints>
       <RowConstraints minHeight="10.0" prefHeight="30.0" />
       <RowConstraints minHeight="10.0" prefHeight="30.0" />
-        <RowConstraints minHeight="10.0" prefHeight="30.0" />
-        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+        <RowConstraints maxHeight="38.0" minHeight="10.0" prefHeight="38.0" />
+        <RowConstraints maxHeight="25.0" minHeight="10.0" prefHeight="22.0" />
         <RowConstraints minHeight="10.0" prefHeight="30.0" />
         <RowConstraints minHeight="10.0" prefHeight="30.0" />
         <RowConstraints minHeight="10.0" prefHeight="30.0" />

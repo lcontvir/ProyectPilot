@@ -3,7 +3,7 @@
 }
 
 #userTextField, #passwordField {
-    -fx-background-color: rgba(255, 255, 255, 0.7);
+    -fx-background-color: rgba(255, 255, 255, 1);
     -fx-text-fill: #000000;
 }
 
@@ -19,6 +19,6 @@
 }
 
 .text-field {
-    -fx-background-color: rgba(255, 255, 255, 0.7);
+    -fx-background-color: rgba(255, 255, 255, 1);
     -fx-text-fill: #000000;
 }
