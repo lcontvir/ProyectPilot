@@ -6,24 +6,57 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+
 public class HelloLogin extends Application {
+
+    public static Stage stage;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloLogin.class.getResource("noticias-view.fxml"));
+        stage = primaryStage;
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloLogin.class.getResource("login-view.fxml"));
+
+        Scene escena = new Scene(fxmlLoader.load(), 400, 430);
+        primaryStage.setMinWidth(400);
+        primaryStage.setMinHeight(430);
 
 
-        Scene scene = new Scene(fxmlLoader.load(),500,800);
-        primaryStage.setMinHeight(500);
-        primaryStage.setMinWidth(800);
-
-
-        primaryStage.setTitle("Inicio de Sesión");
-        primaryStage.setScene(scene);
+        primaryStage.setTitle("Inicio de Sesion");
+        primaryStage.setScene(escena);
         primaryStage.show();
     }
 
     public static void main(String[] args) {
         launch(args);
+    }
+
+    public static void switchScene(String fxmlFile, int minwidth, int minheigh, String titulo) throws IOException {
+
+        FXMLLoader loader = new FXMLLoader(HelloLogin.class.getResource(fxmlFile));
+        Scene escena = new Scene(loader.load());
+
+        double widthAnterior = stage.getWidth();
+        double heighAnterior = stage.getHeight();
+
+        if(heighAnterior < minheigh){
+            heighAnterior = minheigh;
+        }
+        if(widthAnterior < minwidth){
+            widthAnterior = minwidth;
+        }
+
+        boolean Fs = stage.isFullScreen();
+
+        stage.setScene(escena);
+        stage.sizeToScene();
+
+        stage.setHeight(heighAnterior);
+        stage.setWidth(widthAnterior);
+        stage.setMinWidth(minwidth);
+        stage.setMinHeight(minheigh);
+        stage.setFullScreen(Fs);
+        stage.setTitle(titulo);
+
     }
 }

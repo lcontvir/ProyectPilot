@@ -1,5 +1,5 @@
 .root {
-    -fx-background-image: url('Yve.jpg');
+    -fx-background-color: transparent;
 }
 
 #userTextField, #passwordField {
@@ -7,13 +7,18 @@
     -fx-text-fill: #000000;
 }
 
-.login-button {
+.register-button {
     -fx-background-color: #4CAF50;
     -fx-text-fill: white;
 }
 
-.login-grid {
+.register-grid {
     -fx-background-image: url('Yve.jpg');
     -fx-background-repeat: no-repeat;
     -fx-background-size: cover;
+}
+
+.text-field {
+    -fx-background-color: rgba(255, 255, 255, 1);
+    -fx-text-fill: #000000;
 }
