@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
@@ -7,70 +6,87 @@
 <?import javafx.scene.text.*?>
 
 <GridPane alignment="center" hgap="10" minHeight="400.0" minWidth="400.0" styleClass="login-grid" stylesheets="login_style.css" vgap="10" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lcontvir_jaguerher.proyect_pilot.LoginController">
-
+    <!-- Definición del GridPane principal-->
+    <!-- Imagen -->
     <ImageView fitHeight="213.0" fitWidth="338.0">
-      <image>
-         <Image url="@../../../Pokemon.png" />
-      </image>
+        <image>
+            <!-- URL de la imagen -->
+            <Image url="@../../../Pokemon.png" />
+        </image>
+        <!-- Mantener la proporción de la imagen -->
         <preserveRatio>true</preserveRatio>
     </ImageView>
-
+    <!-- Etiqueta para el título "INICIO DE SESION" -->
     <Label minHeight="30.0" prefHeight="38.0" prefWidth="256.0" text="INICIO DE SESION" textFill="white" GridPane.halignment="CENTER" GridPane.rowIndex="2">
         <font>
+            <!-- Fuente y tamaño del texto -->
             <Font name="System Bold" size="30.0" />
         </font>
     </Label>
-
+    <!-- Etiqueta y campo de texto para el usuario -->
     <Label minHeight="25.0" text="USUARIO" textFill="white" GridPane.halignment="LEFT" GridPane.rowIndex="3">
-      <font>
-         <Font name="System Bold" size="12.0" />
-      </font>
+        <font>
+            <!-- Fuente y tamaño del texto -->
+            <Font name="System Bold" size="12.0" />
+        </font>
     </Label>
     <TextField fx:id="userTextField" promptText="correo@example.com" GridPane.halignment="CENTER" GridPane.rowIndex="4">
-      <font>
-         <Font size="16.0" />
-      </font></TextField>
-
+        <font>
+            <!-- Tamaño del texto-->
+            <Font size="16.0" />
+        </font>
+    </TextField>
+    <!-- Etiqueta y campo de contraseña -->
     <Label minHeight="25.0" text="CONTRASEÑA" textFill="white" GridPane.halignment="LEFT" GridPane.rowIndex="5">
-      <font>
-         <Font name="System Bold" size="12.0" />
-      </font>
+        <font>
+            <!-- Fuente y tamaño del texto -->
+            <Font name="System Bold" size="12.0" />
+        </font>
     </Label>
     <PasswordField fx:id="passwordField" promptText="********" GridPane.halignment="CENTER" GridPane.rowIndex="6">
-      <font>
-         <Font size="16.0" />
-      </font></PasswordField>
-
+        <font>
+            <!-- Tamaño del texto -->
+            <Font size="16.0" />
+        </font>
+    </PasswordField>
+    <!-- Botón de inicio de sesión -->
     <Button minHeight="35.0" onAction="#loginButtonAction" styleClass="login-button" text="Iniciar Sesión" textAlignment="CENTER" GridPane.halignment="RIGHT" GridPane.rowIndex="8">
-      <font>
-         <Font size="16.0" />
-      </font>
-      <GridPane.margin>
-         <Insets right="10.0" />
-      </GridPane.margin></Button>
-
+        <font>
+            <!-- Tamaño del texto -->
+            <Font size="16.0" />
+        </font>
+        <GridPane.margin>
+            <!-- Margen del botón -->
+            <Insets right="10.0" />
+        </GridPane.margin>
+    </Button>
+    <!-- Texto de error -->
     <Text fx:id="errorText" fill="RED" styleClass="error-text" textAlignment="CENTER" wrappingWidth="348.0" GridPane.halignment="CENTER" GridPane.rowIndex="9" />
+    <!-- Botón para ir al registro -->
     <Button minHeight="35.0" onAction="#goToRegister" styleClass="login-button" text="No tienes cuenta?" textAlignment="CENTER" GridPane.halignment="LEFT" GridPane.rowIndex="8">
-      <GridPane.margin>
-         <Insets left="10.0" />
-      </GridPane.margin>
-      <font>
-         <Font size="16.0" />
-      </font>
-   </Button>
-   <rowConstraints>
-      <RowConstraints minHeight="10.0" prefHeight="30.0" />
-      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+        <GridPane.margin>
+            <!-- Margen del botón -->
+            <Insets left="10.0" />
+        </GridPane.margin>
+        <font>
+            <!-- Tamaño del texto -->
+            <Font size="16.0" />
+        </font>
+    </Button>
+    <!-- Restricciones de filas -->
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" />
         <RowConstraints maxHeight="38.0" minHeight="10.0" prefHeight="38.0" />
         <RowConstraints maxHeight="25.0" minHeight="10.0" prefHeight="22.0" />
         <RowConstraints minHeight="10.0" prefHeight="30.0" />
         <RowConstraints minHeight="10.0" prefHeight="30.0" />
         <RowConstraints minHeight="10.0" prefHeight="30.0" />
-      <RowConstraints />
-      <RowConstraints />
-      <RowConstraints />
-   </rowConstraints>
-   <columnConstraints>
-      <ColumnConstraints />
-   </columnConstraints>
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+    </rowConstraints>
+    <columnConstraints>
+        <ColumnConstraints />
+    </columnConstraints>
 </GridPane>

@@ -2,12 +2,7 @@ package com.lcontvir_jaguerher.proyect_pilot;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.stage.Stage;
-import org.w3c.dom.Text;
 
 import java.io.IOException;
 

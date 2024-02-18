@@ -2,13 +2,16 @@ package com.lcontvir_jaguerher.proyect_pilot;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 
 public class Usuario {
 
+    // Instancia única del usuario principal
     private static Usuario UsuarioPrincipal;
+
+    // Lista que almacena todos los usuarios registrados
     public static ArrayList<Usuario> ListaUsuarios = new ArrayList<>();
 
+    // Atributos de un usuario
     private String username;
     private String email;
     private String password;
@@ -17,7 +20,6 @@ public class Usuario {
 
     // Constructor privado para evitar la creación de instancias fuera de la clase
     private Usuario() {
-        // Inicialización de atributos si es necesario
     }
 
     // Método estático para obtener la única instancia del singleton
@@ -28,11 +30,12 @@ public class Usuario {
         return UsuarioPrincipal;
     }
 
-    public static void setInstancia(Usuario user){
+    // Setter para actualizar la instancia del usuario
+    public static void setInstancia(Usuario user) {
         UsuarioPrincipal = user;
     }
 
-    // Getter y setter para cada atributo (puedes agregar más según tus necesidades)
+    // Getters y setters para cada atributo del usuario
 
     public String getUsername() {
         return username;

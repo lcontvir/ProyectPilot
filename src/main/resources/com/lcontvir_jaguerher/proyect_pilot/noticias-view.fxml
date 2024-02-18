@@ -6,21 +6,27 @@
 <?import javafx.scene.text.*?>
 
 <GridPane alignment="center" hgap="10" minHeight="500.0" minWidth="400.0" prefHeight="1770.0" prefWidth="800.0" styleClass="noticias-grid" stylesheets="noticias_style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lcontvir_jaguerher.proyect_pilot.Noticias">
-    <columnConstraints>
+    <!-- Definición del GridPane principal -->
+    <columnConstraints>  <!-- Restricciones de columnas -->
         <ColumnConstraints />
     </columnConstraints>
-    <rowConstraints>
+    <rowConstraints>    <!-- Restricciones de filas -->
         <RowConstraints />
       <RowConstraints />
     </rowConstraints>
+    <!-- Contenido del GridPane -->
     <children>
+        <!-- ScrollPane para desplazarse por el contenido -->
         <ScrollPane prefHeight="1772.0" prefWidth="791.0" GridPane.rowIndex="1">
             <content>
+                <!-- GridPane interno para organizar las noticias -->
                 <GridPane prefHeight="1540.0" prefWidth="767.0" vgap="15">
+                    <!-- Restricciones de columnas del GridPane interno -->
                     <columnConstraints>
                         <ColumnConstraints minWidth="10.0" />
                     </columnConstraints>
                     <rowConstraints>
+                        <!-- Restricciones de filas del GridPane interno -->
                         <RowConstraints minHeight="10.0" prefHeight="245.0" />
                         <RowConstraints maxHeight="244.66665649414065" minHeight="10.0" prefHeight="241.3333435058594" />
                         <RowConstraints maxHeight="240.66667683919275" minHeight="10.0" prefHeight="237.999989827474" />
@@ -28,80 +34,99 @@
                   <RowConstraints minHeight="10.0" prefHeight="245.33333333333337" />
                   <RowConstraints minHeight="10.0" prefHeight="245.33333333333337" />
                     </rowConstraints>
+                    <!-- Contenido del GridPane interno -->
                     <children>
                         <Pane prefHeight="313.0" prefWidth="748.0" styleClass="contenedor">
+                            <!-- Paneles para cada noticia -->
                             <children>
+                                <!-- Botones y texto de la noticia -->
                                 <Button layoutX="24.0" layoutY="209.0" prefHeight="28.0" prefWidth="87.0" style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-padding: 5px 10px;" text="Borrar" />
                                 <Button layoutX="128.0" layoutY="209.0" onAction="#handleEditarButtonClick" prefHeight="28.0" prefWidth="87.0" style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-padding: 5px 10px;" text="Editar" />
                                 <Text layoutX="227.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Heroe o villano" wrappingWidth="102.13672637939453" />
                                 <Text layoutX="24.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pachirisu, el diminuto Pokémon de tipo eléctrico, es a menudo subestimado por su apariencia tierna y juguetona. Sin embargo, bajo su apariencia inocente y su pelaje esponjoso, se esconde una determinación feroz y un espíritu valiente. Para algunos, Pachirisu es un héroe, conocido por su lealtad y valentía en momentos de peligro, como cuando enfrentó desafíos eléctricos para salvar a sus compañeros Pokémon. Pero para otros, especialmente entrenadores rivales que han sentido la furia de sus poderosas descargas eléctricas en combate, Pachirisu puede ser visto como un villano astuto y formidable. Su dualidad entre ser un protector fiel y un adversario temible hace que este Pokémon sea tanto un enigma como una fuerza a tener en cuenta en el mundo Pokémon." wrappingWidth="507.4699935913086" />
                                 <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="616.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
+                                        <!-- imagen de la noticia -->
                                         <Image url="@../../../pachirisu.png" />
                                     </image>
                                 </ImageView>
                             </children>
                         </Pane>
+                        <!-- Paneles para cada noticia -->
                         <Pane layoutX="10.0" layoutY="10.0" prefHeight="313.0" prefWidth="748.0" styleClass="contenedor" GridPane.rowIndex="1">
                             <children>
+                                <!-- Botones y texto de la noticia -->
                                 <Button layoutX="25.0" layoutY="195.0" prefHeight="28.0" prefWidth="87.0" style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-padding: 5px 10px;" text="Borrar" />
                                 <Button layoutX="128.0" layoutY="195.0" onAction="#handleEditarButtonClick" prefHeight="28.0" prefWidth="87.0" style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-padding: 5px 10px;" text="Editar" />
                                 <Text layoutX="227.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Titulo de noticia" wrappingWidth="102.13672637939453" />
                                 <Text layoutX="24.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="En Pokémon GO, los equipos Valor (rojo), Sabiduría (azul) e Instinto (amarillo) representan diferentes enfoques en la forma de entrenar y relacionarse con los Pokémon. Valor busca la fuerza, Sabiduría valora el conocimiento y el análisis, mientras que Instinto confía en la intuición y el vínculo natural con los Pokémon. Cada equipo tiene su propia filosofía, pero todos comparten la pasión por la aventura y la comunidad Pokémon." wrappingWidth="507.4699935913086" />
                                 <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="560.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
+                                        <!-- imagen de la noticia -->
                                         <Image url="@../../../equipospogo.jpg" />
                                     </image>
                                 </ImageView>
                             </children>
                         </Pane>
+                        <!-- Paneles para cada noticia -->
                         <Pane layoutX="10.0" layoutY="10.0" prefHeight="238.0" prefWidth="768.0" style="" styleClass="contenedor" GridPane.rowIndex="2">
                             <children>
+                                <!-- Botones y texto de la noticia -->
                                 <Button layoutX="25.0" layoutY="195.0" prefHeight="28.0" prefWidth="87.0" style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-padding: 5px 10px;" text="Borrar" />
                                 <Button layoutX="128.0" layoutY="195.0" onAction="#handleEditarButtonClick" prefHeight="28.0" prefWidth="87.0" style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-padding: 5px 10px;" text="Editar" />
                                 <Text layoutX="227.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Titulo de noticia" wrappingWidth="102.13672637939453" />
                                 <Text layoutX="24.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Eevee, el adorable Pokémon de tipo normal, es famoso por su increíble capacidad para evolucionar en una variedad de formas diferentes, cada una con habilidades únicas y apariencias cautivadoras. Desde la enérgica Jolteon, con su veloz velocidad y poder eléctrico, hasta la misteriosa Espeon, que canaliza el poder psíquico, y la imponente Umbreon, envuelta en la oscuridad de la noche, las evoluciones de Eevee ofrecen una amplia gama de opciones estratégicas para los entrenadores. Además de estas, Vaporeon, Flareon, Leafeon, Glaceon y Sylveon completan la lista, cada una representando elementos naturales o emociones diversas. La versatilidad de Eevee lo convierte en uno de los Pokémon más fascinantes y queridos." wrappingWidth="507.4699935913086" />
                                 <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="558.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
+                                        <!-- imagen de la noticia -->
                                         <Image url="@../../../evees.png" />
                                     </image>
                                 </ImageView>
                             </children>
                         </Pane>
+                        <!-- Paneles para cada noticia -->
                   <Pane prefHeight="313.0" prefWidth="748.0" styleClass="contenedor" GridPane.rowIndex="3">
                      <children>
+                         <!-- Botones y texto de la noticia -->
                         <Button layoutX="24.0" layoutY="204.0" prefHeight="28.0" prefWidth="87.0" style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-padding: 5px 10px;" text="Borrar" />
                         <Text layoutX="227.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Titulo de noticia" wrappingWidth="102.13672637939453" />
                         <Text layoutX="24.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="En la región de Johto, los entrenadores de gimnasio son reconocidos por su habilidad, dedicación y la singularidad de sus equipos Pokémon. Desde Falkner, el líder del gimnasio Violeta que se especializa en Pokémon de tipo volador, hasta el maestro de las olas, Chuck, que domina a los Pokémon de tipo lucha en Cianwood, cada líder de gimnasio representa un desafío único para los entrenadores que buscan obtener las codiciadas medallas. Jasmine, la líder de gimnasio de Olivine, impresiona con su dominio de los Pokémon de tipo acero, mientras que Morty, en Ciudad Ecruteak, deslumbra con sus habilidades de tipo fantasma. Los entrenadores de gimnasio de Johto no solo ofrecen desafíos emocionantes, sino también lecciones valiosas sobre la perseverancia y la superación." wrappingWidth="507.4699935913086" />
                         <ImageView fitHeight="102.0" fitWidth="189.0" layoutX="561.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
                            <image>
+                               <!-- imagen de la noticia -->
                               <Image url="@../../../entrenadores.jpg" />
                            </image>
                         </ImageView>
                         <Button layoutX="126.0" layoutY="204.0" onAction="#handleEditarButtonClick" prefHeight="28.0" prefWidth="87.0" style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-padding: 5px 10px;" text="Editar" />
                      </children>
                   </Pane>
+                        <!-- Paneles para cada noticia -->
                   <Pane prefHeight="313.0" prefWidth="748.0" styleClass="contenedor" GridPane.rowIndex="4">
                      <children>
+                         <!-- Botones y texto de la noticia -->
                         <Button layoutX="25.0" layoutY="195.0" prefHeight="28.0" prefWidth="87.0" style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-padding: 5px 10px;" text="Borrar" />
                         <Button layoutX="128.0" layoutY="195.0" onAction="#handleEditarButtonClick" prefHeight="28.0" prefWidth="87.0" style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-padding: 5px 10px;" text="Editar" />
                         <Text layoutX="227.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Titulo de noticia" wrappingWidth="102.13672637939453" />
                         <Text layoutX="24.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="El enfrentamiento entre Arceus y Giratina es un choque épico entre dos titanes legendarios del universo Pokémon. Arceus, considerado el Pokémon creador y maestro de todos los demás, personifica el poder absoluto y la trascendencia. Por otro lado, Giratina, conocido como el guardián del mundo distorsionado, representa la antítesis de la estabilidad, con su habilidad para manipular el tejido del espacio y el tiempo. Cuando estos dos poderosos Pokémon chocan, el resultado es una batalla titánica que desafía la comprensión misma del cosmos. Arceus, con su dominio sobre los tipos elementales y su capacidad para cambiar de forma según la placa que posea, se enfrenta a Giratina y su astucia táctica y su increíble resistencia." wrappingWidth="507.4699935913086" />
                         <ImageView fitHeight="100.0" fitWidth="189.0" layoutX="564.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
                            <image>
+                               <!-- imagen de la noticia -->
                               <Image url="@../../../duelo.jpg" />
                            </image>
                         </ImageView>
                      </children>
                   </Pane>
+                        <!-- Paneles para cada noticia -->
                   <Pane prefHeight="313.0" prefWidth="748.0" styleClass="contenedor" GridPane.rowIndex="5">
                      <children>
+                         <!-- Botones y texto de la noticia -->
                         <Button layoutX="25.0" layoutY="195.0" prefHeight="28.0" prefWidth="87.0" style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-padding: 5px 10px;" text="Borrar" />
                         <Button layoutX="128.0" layoutY="195.0" onAction="#handleEditarButtonClick" prefHeight="28.0" prefWidth="87.0" style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-padding: 5px 10px;" text="Editar" />
                         <Text layoutX="227.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Titulo de noticia" wrappingWidth="102.13672637939453" />
                         <Text layoutX="24.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="El racismo hacia los Pokémon shiny es una problemática dentro de la comunidad Pokémon que refleja prejuicios arraigados y una mentalidad discriminatoria. Los Pokémon shiny, reconocidos por su coloración alternativa y rara, son a menudo objeto de discriminación y menosprecio por parte de algunos entrenadores. Este trato discriminatorio se basa en la percepción errónea de que los Pokémon shiny son superiores o inferiores a sus contrapartes regulares, lo que lleva a la exclusión y el menosprecio de estos Pokémon en interacciones sociales y en el comercio." wrappingWidth="507.4699935913086" />
                         <ImageView fitHeight="105.0" fitWidth="191.0" layoutX="561.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
                            <image>
+                               <!-- imagen de la noticia -->
                               <Image url="@../../../pokemonshyny..jpg" />
                            </image>
                         </ImageView>

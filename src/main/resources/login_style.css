@@ -2,18 +2,18 @@
     -fx-background-image: url('Yve.jpg');
 }
 
-#userTextField, #passwordField {
+#userTextField, #passwordField {/* Estilo campos texto y contraseña */
     -fx-background-color: rgba(255, 255, 255, 1);
     -fx-text-fill: #000000;
 }
 
-.login-button {
+.login-button {/* Estilo botones */
     -fx-background-color: #4CAF50;
     -fx-text-fill: white;
 }
 
-.login-grid {
-    -fx-background-image: url('Yve.jpg');
+.login-grid {/* Estilo para el contenedor principal */
+    -fx-background-image: url('Yve.jpg');/* Foto fondo para el contenedor principal */
     -fx-background-repeat: no-repeat;
     -fx-background-size: cover;
 }

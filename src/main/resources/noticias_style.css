@@ -1,5 +1,5 @@
-.noticias-grid {
-    -fx-background-image: url('Yve.jpg');
+.noticias-grid {/* Estilo para el contenedor principal */
+    -fx-background-image: url('Yve.jpg');/* Foto fondo para el contenedor principal */
     -fx-background-repeat: no-repeat;
     -fx-background-size: cover;
 }
